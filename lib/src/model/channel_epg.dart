@@ -62,7 +62,7 @@ class XTremeCodeEpgListing {
   final DateTime? start;
 
   /// The end time of the EPG listing.
-  @JsonKey(fromJson: dateTimeFromEpochSeconds)
+  @JsonKey(fromJson: dateTimeFromString)
   final DateTime? end;
 
   /// The description of the EPG listing.

@@ -27,9 +27,7 @@ XTremeCodeInfoVod _$XTremeCodeInfoVodFromJson(Map<String, dynamic> json) =>
       oName: json['o_name'] as String?,
       coverBig: json['cover_big'] as String?,
       movieImage: json['movie_image'] as String?,
-      releaseDate: json['release_date'] == null
-          ? null
-          : DateTime.parse(json['release_date'] as String),
+      releaseDate: json['release_date'] as String?,
       episodeRunTime: dynamicToIntConverter(json['episode_run_time']),
       youtubeTrailer: json['youtube_trailer'] as String?,
       director: json['director'] as String?,
@@ -48,9 +46,7 @@ XTremeCodeInfoVod _$XTremeCodeInfoVodFromJson(Map<String, dynamic> json) =>
       duration: json['duration'] as String?,
       bitrate: dynamicToIntConverter(json['bitrate']),
       rating: dynamicToDoubleConverter(json['rating']),
-      releasedate: json['releasedate'] == null
-          ? null
-          : DateTime.parse(json['releasedate'] as String),
+      releasedate: json['releasedate'] as String?,
       subtitles: json['subtitles'] as List<dynamic>?,
     );
 
@@ -62,7 +58,7 @@ Map<String, dynamic> _$XTremeCodeInfoVodToJson(XTremeCodeInfoVod instance) =>
       'o_name': instance.oName,
       'cover_big': instance.coverBig,
       'movie_image': instance.movieImage,
-      'release_date': instance.releaseDate?.toIso8601String(),
+      'release_date': instance.releaseDate,
       'episode_run_time': instance.episodeRunTime,
       'youtube_trailer': instance.youtubeTrailer,
       'director': instance.director,
@@ -80,7 +76,7 @@ Map<String, dynamic> _$XTremeCodeInfoVodToJson(XTremeCodeInfoVod instance) =>
       'duration': instance.duration,
       'bitrate': instance.bitrate,
       'rating': instance.rating,
-      'releasedate': instance.releasedate?.toIso8601String(),
+      'releasedate': instance.releasedate,
       'subtitles': instance.subtitles,
     };
 

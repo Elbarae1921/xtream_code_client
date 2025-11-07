@@ -140,8 +140,8 @@ class XTremeCodeInfo {
   final String? genre;
 
   /// The release date of the series.
-  @JsonKey(name: 'releaseDate', fromJson: dateTimeFromString)
-  final DateTime? releaseDate;
+  @JsonKey(name: 'releaseDate')
+  final String? releaseDate;
 
   /// The last modified date of the series.
   @JsonKey(name: 'last_modified', fromJson: dateTimeFromEpochSeconds)
@@ -268,8 +268,8 @@ class XTremeCodeEpisodeInfo {
   final int? tmdbId;
 
   /// The release date of the episode.
-  @JsonKey(name: 'release_date', fromJson: dateTimeFromString)
-  final DateTime? releaseDate;
+  @JsonKey(name: 'release_date')
+  final String? releaseDate;
 
   /// The plot of the episode.
   final String? plot;

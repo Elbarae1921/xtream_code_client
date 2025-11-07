@@ -89,7 +89,7 @@ class XTremeCodeInfoVod {
 
   /// The release date of the movie.
   @JsonKey(name: 'release_date')
-  final DateTime? releaseDate;
+  final String? releaseDate;
 
   /// The runtime of the episode in minutes.
   @JsonKey(name: 'episode_run_time', fromJson: dynamicToIntConverter)
@@ -151,7 +151,7 @@ class XTremeCodeInfoVod {
   final double? rating;
 
   /// The release date of the movie.
-  final DateTime? releasedate;
+  final String? releasedate;
 
   /// The subtitles of the movie.
   final List<dynamic>? subtitles;

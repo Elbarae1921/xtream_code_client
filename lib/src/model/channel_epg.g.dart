@@ -28,7 +28,7 @@ XTremeCodeEpgListing _$XTremeCodeEpgListingFromJson(
       title: json['title'] as String?,
       lang: json['lang'] as String?,
       start: dateTimeFromString(json['start'] as String?),
-      end: dateTimeFromEpochSeconds(json['end']),
+      end: dateTimeFromString(json['end'] as String?),
       description: json['description'] as String?,
       channelId: json['channel_id'] as String?,
       startTimestamp: dateTimeFromEpochSeconds(json['start_timestamp']),
